@@ -54,13 +54,21 @@ if st.button("Get Prediction"):
         'Property_Area': [property_area]
     })
 
-    # Get prediction from the loaded model
+    
+print("Loaded model:", loaded_model)
+print("New data:", new_data)
+try:
     predictions = loaded_model.predict(new_data)
+    print("Predictions:", predictions)
+    
     st.write('1 for applicable for LOAN')
     st.write('0 for not applicable for LOAN')
 
     # Display the prediction
     st.subheader("Prediction:")
     st.write(predictions)
+except Exception as e:
+    print(f"Error making predictions: {e}")
+
 
 #This updated app includes example input data below the input fields, which should help users understand what kind of data to enter.
