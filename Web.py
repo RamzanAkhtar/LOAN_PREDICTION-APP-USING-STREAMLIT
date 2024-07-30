@@ -4,9 +4,13 @@ import pandas as pd
 import streamlit as st
 
 
-# Load the saved model
-with open('./model.pkl', 'rb') as f:
+import os
+
+model_path = os.path.join(os.path.dirname(__file__), 'model.pkl')
+with open(model_path, 'rb') as f:
     loaded_model = pickle.load(f)
+
+
 # Create a Streamlit app
 st.title("Loan Prediction App")
 
