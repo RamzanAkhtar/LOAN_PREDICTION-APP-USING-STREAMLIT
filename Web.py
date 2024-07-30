@@ -7,6 +7,15 @@ import streamlit as st
 
 
 
+import pickle
+import requests
+
+model_url = "(link unavailable)"
+response = requests.get(model_url)
+loaded_model = pickle.loads(response.content)
+
+
+
 # Load the saved model
 with open('model.pkl', 'rb') as f:
     loaded_model = pickle.load(f)
