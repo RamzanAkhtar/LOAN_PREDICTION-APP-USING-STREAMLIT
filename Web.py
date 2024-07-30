@@ -8,7 +8,7 @@ import requests
 
 model_url = 'https://github.com/RamzanAkhtar/LOAN_PREDICTION-APP-USING-STREAMLIT/model.pkl '
 response = requests.get(model_url)
-loaded_model = pickle.loads(response.content)
+loaded_model = pickle.loads(response)
 
 
 # Load the saved model
