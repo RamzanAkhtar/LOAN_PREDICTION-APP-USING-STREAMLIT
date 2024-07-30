@@ -4,13 +4,6 @@ import pandas as pd
 import streamlit as st
 
 
-import requests
-
-model_url = 'https://github.com/RamzanAkhtar/LOAN_PREDICTION-APP-USING-STREAMLIT/model.pkl '
-response = requests.get(model_url)
-loaded_model = pickle.loads(response)
-
-
 # Load the saved model
 with open('model.pkl', 'rb') as f:
     loaded_model = pickle.load(f)
