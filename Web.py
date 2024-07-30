@@ -6,6 +6,18 @@ import pandas as pd
 import streamlit as st
 
 
+
+import requests
+
+model_url = "(model.pkl)"
+response = requests.get(model_url)
+with open("model.pkl", "wb") as f:
+    f.write(response.content)
+
+
+# Load the saved model
+with open('model.pkl', 'rb') as f:
+    loaded_model = pickle.load(f)
 # Create a Streamlit app
 st.title("Loan Prediction App")
 
