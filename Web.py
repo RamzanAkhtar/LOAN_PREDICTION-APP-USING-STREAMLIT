@@ -1,20 +1,7 @@
-#Here's an updated version of the Streamlit app that includes example input data:
-
 import pickle
 import numpy as np
 import pandas as pd
 import streamlit as st
-
-
-
-import pickle
-import requests
-
-model_url = "(link unavailable)"
-response = requests.get(model_url)
-loaded_model = pickle.loads(response.content)
-
-
 
 # Load the saved model
 with open('model.pkl', 'rb') as f:
