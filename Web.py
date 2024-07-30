@@ -5,7 +5,7 @@ import streamlit as st
 
 
 # Load the saved model
-with open('model.pkl', 'rb') as f:
+with open('src/model.pkl'', 'rb') as f:
     loaded_model = pickle.load(f)
 # Create a Streamlit app
 st.title("Loan Prediction App")
